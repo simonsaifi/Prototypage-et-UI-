@@ -32,9 +32,19 @@ public class LoginController {
 
     @FXML
     void login(ActionEvent event) {
-        System.out.println(login.getText());
-        System.out.println(pass.getText());
-
+        BDDUtilisateur bdd=new BDDUtilisateur();
+        if (!login.getText().isEmpty()&&!pass.getText().isEmpty()){
+            boolean connect= bdd.CheckConnection(login.getText(),pass.getText());
+            if (connect){
+                System.out.println("bienvenue "+login.getText());
+            }
+            else {
+                System.out.println("une erreur est survenue");
+            }
+        }
+        else{
+            System.out.println("veuillez  remplir tous les champ");
+        }
     }
 
     @FXML

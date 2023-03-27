@@ -38,6 +38,14 @@ public class InscriptionController {
 
     @FXML
     void incription(ActionEvent event) {
+         BDDUtilisateur bdd=new BDDUtilisateur();
+         if (!login.getText().isEmpty()&&!nom.getText().isEmpty()&&!prenon.getText().isEmpty()&&!pass.getText().isEmpty()){
+            bdd.addUtilisateur(nom.getText(),prenon.getText(),login.getText(),pass.getText());
+             System.out.println("vous etes inscrit");
+         }
+         else{
+            System.out.println("veuillez  remplir tous les champ");
+        }
 
     }
 

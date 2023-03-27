@@ -44,4 +44,9 @@ public class Utilisateur {
     public void setPass(String pass) {
         this.pass = pass;
     }
+
+    @Override
+    public String toString() {
+        return nom+","+prenom+","+login+","+pass;
+    }
 }
