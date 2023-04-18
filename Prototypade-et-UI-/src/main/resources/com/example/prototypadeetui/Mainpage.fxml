@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -18,7 +19,10 @@
             <Image url="@searchlogo.png" />
          </image>
       </ImageView>
-      <VBox fx:id="vbox" layoutX="42.0" layoutY="86.0" minWidth="700.0" prefHeight="274.0" prefWidth="700.0" />
+      <VBox fx:id="vbox" layoutX="42.0" layoutY="86.0" minWidth="700.0" prefHeight="274.0" prefWidth="700.0">
+         <children>
+            <ListView fx:id="listview" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgrey;" />
+         </children></VBox>
 
    </children>
 </AnchorPane>

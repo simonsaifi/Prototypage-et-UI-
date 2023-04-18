@@ -1,16 +1,16 @@
 package com.example.prototypadeetui;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.collections.ObservableList;
 
-import java.io.IOException;
+
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class MainpageController implements Initializable {
@@ -23,6 +23,9 @@ public class MainpageController implements Initializable {
 
     @FXML
     private VBox vbox;
+
+    @FXML
+    private ListView<String> listview;
 
     private String  utilisateur;
 
@@ -41,7 +44,15 @@ public class MainpageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //Node node=new Node() ;
+        final int NUM_NAMES = 10000;
+
+        ObservableList<String> names = FXCollections.observableArrayList();
+        for (int i = 1; i <= NUM_NAMES; i++) {
+            names.add("Location " + i);
+        }
+        this.listview.setItems(names);
+
 
     }
+
 }

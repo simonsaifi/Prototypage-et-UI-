@@ -3,3 +3,8 @@
     -fx-border-color: black;
     -fx-min-width: 500;
 }
+
+#listView{
+    -fx-border-radius:20;
+    -fx-border-color: black;
+}
