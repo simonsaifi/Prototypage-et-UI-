@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fde9b2a2-48f1-40a1-a7b4-b31a5fb284a0" name="Changes" comment="implementation de connection">
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java" afterDir="false" />
+    <list default="true" id="fde9b2a2-48f1-40a1-a7b4-b31a5fb284a0" name="Changes" comment="implementation de la bdd +inscription et login">
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/MainpageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/Mainpage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/callendar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/homepage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/item.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/mainpage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/searchlogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/utilisateur.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/InscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/InscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/utilisateur.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/utilisateur.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Utilisateur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -42,20 +50,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/pedro/IdeaProjects/Prototypage-et-UI-/Prototypade-et-UI-/src/main/resources/com&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pedro/IdeaProjects/ice-demos/java&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pedro\IdeaProjects\Prototypage-et-UI-\Prototypade-et-UI-\src\main\resources\com\example\prototypadeetui" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pedro\IdeaProjects\Prototypage-et-UI-\Prototypade-et-UI-\src\bdd" />
       <recent name="C:\Users\pedro\IdeaProjects\Prototypage-et-UI-\Prototypade-et-UI-\src\main\resources\com\example\prototypadeetui" />
@@ -104,6 +120,15 @@
       <option name="presentableId" value="Default" />
       <updated>1679906358148</updated>
       <workItem from="1679906359575" duration="11434000" />
+      <workItem from="1679932092990" duration="227000" />
+      <workItem from="1679938658755" duration="4523000" />
+      <workItem from="1679954157980" duration="63000" />
+      <workItem from="1680212740453" duration="7284000" />
+      <workItem from="1680270431713" duration="1843000" />
+      <workItem from="1680550522743" duration="142000" />
+      <workItem from="1680629263432" duration="3447000" />
+      <workItem from="1680731848453" duration="2494000" />
+      <workItem from="1681811587686" duration="731000" />
     </task>
     <task id="LOCAL-00001" summary="implementation de connection">
       <created>1679908237319</created>
@@ -112,7 +137,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679908237319</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implementation de la">
+      <created>1679932221806</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679932221806</updated>
+    </task>
+    <task id="LOCAL-00003" summary="implementation de la bdd +inscription et login">
+      <created>1679932303372</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679932303372</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +159,28 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implementation de connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementation de connection" />
+    <MESSAGE value="implementation de la" />
+    <MESSAGE value="implementation de la bdd +inscription et login" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementation de la bdd +inscription et login" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

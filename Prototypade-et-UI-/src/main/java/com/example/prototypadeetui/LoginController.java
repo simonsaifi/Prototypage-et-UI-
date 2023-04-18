@@ -31,12 +31,20 @@ public class LoginController {
     private Button register;
 
     @FXML
-    void login(ActionEvent event) {
+    void login(ActionEvent event) throws IOException {
         BDDUtilisateur bdd=new BDDUtilisateur();
         if (!login.getText().isEmpty()&&!pass.getText().isEmpty()){
             boolean connect= bdd.CheckConnection(login.getText(),pass.getText());
             if (connect){
-                System.out.println("bienvenue "+login.getText());
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Mainpage.fxml"));
+                root=loader.load();
+                MainpageController controller=loader.getController();
+                controller.setUtilisateur(login.getText());
+                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                scene = new Scene (root);
+
+                stage.setScene(scene);
+                stage.show();
             }
             else {
                 System.out.println("une erreur est survenue");
@@ -49,7 +57,8 @@ public class LoginController {
 
     @FXML
     void register(ActionEvent event) throws IOException {
-        root= FXMLLoader.load(getClass().getResource("incription.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("incription.fxml"));
+        root=loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene (root);
         stage.setScene(scene);

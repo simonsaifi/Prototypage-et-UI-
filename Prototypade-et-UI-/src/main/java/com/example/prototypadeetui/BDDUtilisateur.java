@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BDDUtilisateur {
-    private String fEnregistrement="C:/Users/pedro/IdeaProjects/Prototypage-et-UI-/Prototypade-et-UI-/src/bdd/utilisateur.txt";
+    private String fEnregistrement="C:\\Users\\pedro\\IdeaProjects\\Prototypage-et-UI-\\Prototypade-et-UI-\\src\\bdd\\utilisateur.txt";
     private ArrayList<Utilisateur> utilisateurs;
 
     public BDDUtilisateur( ) {
@@ -16,7 +16,10 @@ public class BDDUtilisateur {
     public void InitialiseUtilisateur(){
 
         try {
+
+
             FileInputStream file = new FileInputStream(fEnregistrement);
+
             Scanner scanner = new Scanner(file);
             while(scanner.hasNextLine())
             {
@@ -38,7 +41,9 @@ public class BDDUtilisateur {
     }
     public void enregistementUtilisateur(Utilisateur utilisateur){
         try {
-            File file = new File("C:/Users/pedro/IdeaProjects/Prototypage-et-UI-/Prototypade-et-UI-/src/bdd/utilisateur.txt");
+           //String path =  new File("src/bdd/utilisateur.txt").getAbsolutePath();
+            File file = new File(fEnregistrement);
+            //File file = new File("C:/Users/pedro/IdeaProjects/Prototypage-et-UI-/Prototypade-et-UI-/src/bdd/utilisateur.txt");
             FileWriter fw = new FileWriter(file,true);
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write('\n'+utilisateur.toString());
