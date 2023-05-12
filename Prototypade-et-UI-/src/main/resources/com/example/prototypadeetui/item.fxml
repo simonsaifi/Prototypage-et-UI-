@@ -7,33 +7,43 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="29.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="29.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototypadeetui.ItemController">
    <children>
-      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="700.0">
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1300.0">
          <children>
-            <Label fx:id="lVille" text="ville ">
+            <Label fx:id="ville" prefHeight="17.0" prefWidth="100.0" text="ville ">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
             </Label>
-            <Label fx:id="lPays" text="pays l">
+            <Label fx:id="pays" prefWidth="100.0" text="pays ">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="type" prefWidth="100.0" text="type logement ">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="prix" prefWidth="100.0" text="prix">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="dateD" prefWidth="100.0" text="date bebut">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="dateF" prefWidth="100.0" text="date de fin">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#reserver" prefWidth="100.0" text="Reserver">
                <HBox.margin>
                   <Insets left="200.0" />
-               </HBox.margin>
-            </Label>
-            <Label fx:id="ltypelogement" text="type logement ">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Label>
-            <Label fx:id="lprix" text="prix">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Label>
-            <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#reserver" text="Reserver">
-               <HBox.margin>
-                  <Insets left="100.0" />
                </HBox.margin>
                <font>
                   <Font name="Comic Sans MS Bold" size="12.0" />

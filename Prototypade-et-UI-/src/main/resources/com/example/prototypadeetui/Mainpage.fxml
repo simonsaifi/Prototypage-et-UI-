@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="searchIcon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="800.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@mainpage.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototypadeetui.MainpageController">
+<AnchorPane fx:id="searchIcon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800.0" minWidth="1600.0" prefHeight="400.0" prefWidth="1.0" stylesheets="@mainpage.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototypadeetui.MainpageController">
    <children>
-      <TextField fx:id="search" layoutX="55.0" layoutY="38.0">
+      <TextField fx:id="search" layoutX="202.0" layoutY="75.0" minWidth="800.0" onKeyReleased="#onChangeSearch" prefWidth="900.0" AnchorPane.rightAnchor="498.0" AnchorPane.topAnchor="75.0">
          <opaqueInsets>
             <Insets />
          </opaqueInsets></TextField>
-      <ImageView fitHeight="26.0" fitWidth="19.0" layoutX="523.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="26.0" fitWidth="19.0" layoutX="1067.0" layoutY="79.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="514.0" AnchorPane.topAnchor="79.0">
          <image>
             <Image url="@searchlogo.png" />
          </image>
       </ImageView>
-      <VBox fx:id="vbox" layoutX="42.0" layoutY="86.0" minWidth="700.0" prefHeight="274.0" prefWidth="700.0">
-         <children>
-            <ListView fx:id="listview" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgrey;" />
-         </children></VBox>
+      <ScrollPane minHeight="550.0" minWidth="1400.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="150.0">
+         <content>
+            <VBox fx:id="vbox" minHeight="500.0" minWidth="1400.0" onKeyReleased="#onChangeSearch" />
+
+         </content>
+      </ScrollPane>
+      <ChoiceBox fx:id="filtre" layoutX="1138.0" layoutY="75.0" prefWidth="150.0" AnchorPane.leftAnchor="1138.0" AnchorPane.topAnchor="75.0" />
+      <Label fx:id="Lconnection" layoutX="1357.0" layoutY="20.0" onMouseClicked="#connection" text="connection" />
 
    </children>
 </AnchorPane>

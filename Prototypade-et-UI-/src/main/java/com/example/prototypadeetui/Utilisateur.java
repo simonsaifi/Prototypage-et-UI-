@@ -1,18 +1,21 @@
 package com.example.prototypadeetui;
 
 public class Utilisateur {
+    private int id;
     private String nom;
     private String prenom;
     private String login;
     private String pass;
 
-    public Utilisateur(String nom, String prenom, String login, String pass) {
+
+    public Utilisateur(int id,String nom, String prenom, String login, String pass) {
+        this.id=id;
         this.nom = nom;
         this.prenom = prenom;
         this.login = login;
         this.pass = pass;
     }
-
+    public int getId(){return id;}
     public String getNom() {
         return nom;
     }
@@ -47,6 +50,6 @@ public class Utilisateur {
 
     @Override
     public String toString() {
-        return nom+","+prenom+","+login+","+pass;
+        return id+","+nom+","+prenom+","+login+","+pass;
     }
 }

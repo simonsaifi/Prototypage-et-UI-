@@ -4,20 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fde9b2a2-48f1-40a1-a7b4-b31a5fb284a0" name="Changes" comment="implementation de la bdd +inscription et login">
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/MainpageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/Mainpage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/callendar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/homepage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/item.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/mainpage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/searchlogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/utilisateur.txt" afterDir="false" />
+    <list default="true" id="fde9b2a2-48f1-40a1-a7b4-b31a5fb284a0" name="Changes" comment="ajout de la redirection vers l'accueil">
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/commentaire.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/sejour.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDCommentaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDSejour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Commentaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/DetailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Sejour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/utilisateur.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/utilisateur.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/MainpageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/MainpageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Utilisateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/Mainpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/Mainpage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/item.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/item.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +131,16 @@
       <workItem from="1680550522743" duration="142000" />
       <workItem from="1680629263432" duration="3447000" />
       <workItem from="1680731848453" duration="2494000" />
-      <workItem from="1681811587686" duration="731000" />
+      <workItem from="1681811587686" duration="3773000" />
+      <workItem from="1681832108700" duration="5860000" />
+      <workItem from="1682872819725" duration="1670000" />
+      <workItem from="1683422687127" duration="6886000" />
+      <workItem from="1683534372834" duration="8936000" />
+      <workItem from="1683551373811" duration="11866000" />
+      <workItem from="1683579608053" duration="661000" />
+      <workItem from="1683705294416" duration="611000" />
+      <workItem from="1683708048776" duration="1052000" />
+      <workItem from="1683797553666" duration="6098000" />
     </task>
     <task id="LOCAL-00001" summary="implementation de connection">
       <created>1679908237319</created>
@@ -151,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679932303372</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ajout de la redirection vers l'accueil">
+      <created>1681812337921</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681812337921</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +180,8 @@
     <MESSAGE value="implementation de connection" />
     <MESSAGE value="implementation de la" />
     <MESSAGE value="implementation de la bdd +inscription et login" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementation de la bdd +inscription et login" />
+    <MESSAGE value="ajout de la redirection vers l'accueil" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout de la redirection vers l'accueil" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

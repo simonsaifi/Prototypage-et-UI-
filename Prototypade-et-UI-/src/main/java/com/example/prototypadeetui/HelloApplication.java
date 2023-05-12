@@ -11,9 +11,10 @@ import java.util.ArrayList;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 500);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Mainpage.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(),1600 , 800);
         stage.setTitle("Application de Reservation de voyages");
+
         stage.setScene(scene);
         stage.show();
         BDDUtilisateur bddUtilisateur=new BDDUtilisateur();

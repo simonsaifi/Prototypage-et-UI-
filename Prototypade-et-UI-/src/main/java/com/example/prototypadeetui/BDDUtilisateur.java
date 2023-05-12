@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BDDUtilisateur {
-    private String fEnregistrement="C:\\Users\\simon\\IdeaProjects\\Prototypage-et-UI-\\Prototypage-et-UI-\\Prototypade-et-UI-\\src\\bdd\\utilisateur.txt";
+    private String fEnregistrement="C:\\Users\\pedro\\IdeaProjects\\Prototypage-et-UI-\\Prototypade-et-UI-\\src\\bdd\\utilisateur.txt";
     private ArrayList<Utilisateur> utilisateurs;
 
     public BDDUtilisateur( ) {
@@ -24,7 +24,7 @@ public class BDDUtilisateur {
             while(scanner.hasNextLine())
             {
                 String data[]=scanner.nextLine().split(",");
-                Utilisateur utilisateur=new Utilisateur(data[0],data[1],data[2],data[3]);
+                Utilisateur utilisateur=new Utilisateur(Integer.parseInt(data[0]),data[1],data[2],data[3],data[4]);
                 utilisateurs.add(utilisateur);
             }
             scanner.close();
@@ -54,7 +54,7 @@ public class BDDUtilisateur {
     }
 
     public void addUtilisateur(String nom ,String prenom,String login ,String pass){
-        Utilisateur utilisateur =new Utilisateur( nom,prenom,login,pass);
+        Utilisateur utilisateur =new Utilisateur(utilisateurs.size(),nom,prenom,login,pass);
         utilisateurs.add(utilisateur);
         enregistementUtilisateur(utilisateur);
     }

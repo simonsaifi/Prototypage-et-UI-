@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototypadeetui.DetailController">
+   <children>
+      <ChoiceBox fx:id="note" layoutX="808.0" layoutY="733.0" prefWidth="150.0" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="750.0" />
+      <Button layoutX="1096.0" layoutY="733.0" mnemonicParsing="false" onAction="#addcom" text="ajouter commentaire" AnchorPane.leftAnchor="1150.0" AnchorPane.topAnchor="750.0" />
+      <TextField fx:id="newcom" layoutX="105.0" layoutY="733.0" prefWidth="800.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="750.0" />
+      <Label layoutX="950.0" layoutY="723.0" text="note" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="725.0" />
+      <ScrollPane fx:id="com" layoutX="100.0" layoutY="337.0" prefHeight="300.0" prefWidth="1400.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="400.0" />
+      <Label layoutX="100.0" layoutY="725.0" text="Commentaire" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="725.0" />
+      <Label layoutX="100.0" layoutY="319.0" text="Commentaires " AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="375.0" />
+      <Label layoutX="100.0" layoutY="73.0" text="Detail sejour" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="172.0" text="ville" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="175.0" />
+      <Label layoutX="181.0" layoutY="175.0" text="pays" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="175.0" />
+      <Label layoutX="288.0" layoutY="175.0" text="type" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="175.0" />
+      <Label layoutX="524.0" layoutY="184.0" text="prix " AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="175.0" />
+      <Label layoutX="399.0" layoutY="175.0" text="proprietaire" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="175.0" />
+      <Label layoutX="680.0" layoutY="175.0" text="date de debut" AnchorPane.leftAnchor="850.0" AnchorPane.topAnchor="175.0" />
+      <Label layoutX="742.0" layoutY="175.0" text="date de fin" AnchorPane.leftAnchor="1000.0" />
+      <Button layoutX="1355.0" layoutY="363.0" mnemonicParsing="false" onAction="#addpanier" text="add panier" />
+      <Label fx:id="ville" layoutX="96.0" layoutY="211.0" text="Label" />
+      <Label fx:id="pays" layoutX="248.0" layoutY="211.0" text="Label" />
+      <Label fx:id="type" layoutX="398.0" layoutY="211.0" text="Label" />
+      <Label fx:id="proprietaire" layoutX="567.0" layoutY="211.0" text="Label" />
+      <Label fx:id="prix" layoutX="698.0" layoutY="211.0" text="Label" />
+      <Label fx:id="dated" layoutX="874.0" layoutY="211.0" text="Label" />
+      <Label fx:id="datef" layoutX="1015.0" layoutY="211.0" text="Label" />
+   </children>
+</AnchorPane>
