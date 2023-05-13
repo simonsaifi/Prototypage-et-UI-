@@ -29,7 +29,7 @@ public class ItemComment {
     }
 
     public void setlabel(){
-        Utilisateur uti=bddUtilisateur.getutilisateur(commentaire.getIdSejour());
+        Utilisateur uti=bddUtilisateur.getutilisateur(commentaire.getIdutilisateur());
         date.setText(String.valueOf(commentaire.getDate()));
         note.setText(String.valueOf(commentaire.getNote()));
         comment.setText(commentaire.getMessage());

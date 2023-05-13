@@ -14,7 +14,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototypadeetui.DetailController">
    <children>
       <ChoiceBox fx:id="note" layoutX="808.0" layoutY="733.0" prefWidth="150.0" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="750.0" />
-      <Button layoutX="1096.0" layoutY="733.0" mnemonicParsing="false" onAction="#addcom" text="ajouter commentaire" AnchorPane.leftAnchor="1150.0" AnchorPane.topAnchor="750.0" />
+      <Button fx:id="butonCom" layoutX="1096.0" layoutY="733.0" mnemonicParsing="false" onAction="#addcom" text="ajouter commentaire" AnchorPane.leftAnchor="1150.0" AnchorPane.topAnchor="750.0" />
       <TextField fx:id="newcom" layoutX="105.0" layoutY="733.0" prefWidth="800.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="750.0" />
       <Label layoutX="950.0" layoutY="723.0" text="note" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="725.0" />
       <ScrollPane fx:id="com" layoutX="100.0" layoutY="337.0" prefHeight="300.0" prefWidth="1400.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="400.0">

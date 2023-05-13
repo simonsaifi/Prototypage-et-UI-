@@ -14,15 +14,13 @@ public class BDDCommentaire {
     private ArrayList<Commentaire> commentaires;
 
     public BDDCommentaire( ) {
-        this.commentaires= new ArrayList<Commentaire>();
         InitialiseCommentaire();
 
     }
     public void InitialiseCommentaire(){
 
         try {
-
-
+            commentaires= new ArrayList<Commentaire>();
             FileInputStream file = new FileInputStream(fEnregistrement);
 
             Scanner scanner = new Scanner(file);

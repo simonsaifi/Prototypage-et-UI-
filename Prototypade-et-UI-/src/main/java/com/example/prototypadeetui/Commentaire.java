@@ -70,6 +70,6 @@ public class Commentaire {
 
     @Override
     public String toString() {
-        return id+","+idSejour+","+","+idutilisateur+","+message+","+note+","+date;
+        return id+","+idSejour+","+idutilisateur+","+message+","+note+","+date;
     }
 }

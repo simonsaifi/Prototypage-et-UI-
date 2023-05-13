@@ -24,12 +24,8 @@
                   <Insets left="100.0" top="10.0" />
                </HBox.margin>
             </Label>
-            <Label fx:id="note" text="Label">
-               <HBox.margin>
-                  <Insets left="600.0" top="10.0" />
-               </HBox.margin>
-            </Label>
          </children>
       </HBox>
+      <Label fx:id="note" layoutX="877.0" layoutY="12.0" text="Label" />
    </children>
 </fx:root>
