@@ -3,6 +3,7 @@ package com.example.prototypadeetui;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class BDDUtilisateur {
     private String fEnregistrement="C:\\Users\\pedro\\IdeaProjects\\Prototypage-et-UI-\\Prototypade-et-UI-\\src\\bdd\\utilisateur.txt";
@@ -38,6 +39,22 @@ public class BDDUtilisateur {
 
     public ArrayList<Utilisateur> getUtilisateurs(){
         return utilisateurs;
+    }
+    public Utilisateur getutilisateur(int id){
+        for (int i=0;i<utilisateurs.size();i++){
+            if (utilisateurs.get(i).getId()==id){
+                return utilisateurs.get(i);
+            }
+        }
+        return null;
+    }
+    public Utilisateur getutilisateur(String login){
+        for (int i=0;i<utilisateurs.size();i++){
+            if (utilisateurs.get(i).getLogin().equals(login)){
+                return utilisateurs.get(i);
+            }
+        }
+        return null;
     }
     public void enregistementUtilisateur(Utilisateur utilisateur){
         try {

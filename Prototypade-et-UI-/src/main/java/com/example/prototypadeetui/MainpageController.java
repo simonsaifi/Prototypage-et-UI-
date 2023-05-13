@@ -53,9 +53,11 @@ public class MainpageController implements Initializable {
     private ArrayList<Sejour> sejours;
     private  ArrayList<Sejour> sejoursToShow;
 
+    private ArrayList<ItemController> controllers;
+
     private String [] choicefiltre={"ville","pays","prix superieur","prix inferieur","type de logement"};
     private int nbNodes;
-
+    Node[] nodes;
     public String getUtilisateur() {
         return utilisateur;
     }
@@ -63,12 +65,16 @@ public class MainpageController implements Initializable {
         utilisateur="";
         sejours=new ArrayList<Sejour>();
         sejoursToShow=new ArrayList<Sejour>();
-
+        controllers=new ArrayList<ItemController>();
 
     }
     public void setUtilisateur(String utilisateur) {
         this.utilisateur = utilisateur;
         Lconnection.setText(utilisateur);
+        for (int i=0;i<controllers.size();i++){
+            controllers.get(i).setUtilisateur(utilisateur);
+        }
+
         System.out.println(utilisateur);
     }
 
@@ -92,14 +98,14 @@ public class MainpageController implements Initializable {
 
     }
     public void aficherliste(ArrayList<Sejour> as){
-        Node[] nodes=new Node[as.size()];
+        nodes=new Node[as.size()];
         for (int i=0;i<nodes.length;i++){
             try {
                 FXMLLoader fmx=new FXMLLoader(getClass().getResource("item.fxml"));
                 nodes[i]= fmx.load();
                 ItemController itemController=fmx.getController();
                 itemController.setSejour(as.get(i));
-
+                controllers.add(itemController);
                 vbox.getChildren().add(nodes[i]);
 
             } catch (IOException e) {

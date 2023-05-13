@@ -1,18 +1,31 @@
 package com.example.prototypadeetui;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class Commentaire {
     private int id;
     private int idSejour;
     private int idutilisateur;
     private String message;
     private int note;
+    private LocalDate date;
 
-    public Commentaire(int id, int idSejour, int idutilisateur, String message, int note) {
+    public Commentaire(int id, int idSejour, int idutilisateur, String message, int note, LocalDate date) {
         this.id = id;
         this.idSejour = idSejour;
         this.idutilisateur = idutilisateur;
         this.message = message;
         this.note = note;
+        this.date=date;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getIdSejour() {
@@ -47,8 +60,16 @@ public class Commentaire {
         this.note = note;
     }
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
-        return id+","+idSejour+","+","+idutilisateur+","+message+","+note;
+        return id+","+idSejour+","+","+idutilisateur+","+message+","+note+","+date;
     }
 }

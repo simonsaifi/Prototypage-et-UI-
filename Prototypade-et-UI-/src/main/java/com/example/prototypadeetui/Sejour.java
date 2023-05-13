@@ -1,5 +1,6 @@
 package com.example.prototypadeetui;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Sejour {
@@ -8,12 +9,12 @@ public class Sejour {
     private String pays;
     private int prix;
     private String typeL;
-    private Date debut;
-    private Date fin;
+    private LocalDate debut;
+    private LocalDate fin;
     private String proprietaire;
     private Boolean status;
 
-    public Sejour(int id ,String vile, String pays, int prix, String typeL, Date debut, Date fin, String proprietaire, Boolean status) {
+    public Sejour(int id , String vile, String pays, int prix, String typeL, LocalDate debut, LocalDate fin, String proprietaire, Boolean status) {
         this.id=id;
         this.vile = vile;
         this.pays = pays;
@@ -41,11 +42,11 @@ public class Sejour {
         return typeL;
     }
 
-    public Date getDebut() {
+    public LocalDate getDebut() {
         return debut;
     }
 
-    public Date getFin() {
+    public LocalDate getFin() {
         return fin;
     }
     public int getId(){return id;}
@@ -72,11 +73,11 @@ public class Sejour {
         this.typeL = typeL;
     }
 
-    public void setDebut(Date debut) {
+    public void setDebut(LocalDate debut) {
         this.debut = debut;
     }
 
-    public void setFin(Date fin) {
+    public void setFin(LocalDate fin) {
         this.fin = fin;
     }
 

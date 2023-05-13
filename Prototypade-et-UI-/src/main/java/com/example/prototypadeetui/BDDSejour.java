@@ -3,6 +3,7 @@ package com.example.prototypadeetui;
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -27,9 +28,9 @@ public class BDDSejour {
             while(scanner.hasNextLine())
             {
                 String data[]=scanner.nextLine().split(",");
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                Date datedebut=new Date(sdf.parse(data[5]).getTime());
-                Date datefin=new Date(sdf.parse(data[6]).getTime());
+                LocalDate datedebut=LocalDate.parse(data[5]);
+                LocalDate datefin=LocalDate.parse(data[6]);
+
                 boolean status=Boolean.parseBoolean(data[8]);
                 Sejour sejour=new Sejour(Integer.parseInt(data[0]),data[1],data[2],Integer.parseInt(data[3]),data[4],datedebut,datefin,data[7],status);
                 sejours.add(sejour);
@@ -39,8 +40,6 @@ public class BDDSejour {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (ParseException e) {
             throw new RuntimeException(e);
         }
     }
@@ -62,7 +61,7 @@ public class BDDSejour {
         }
     }
 
-    public void addSejour(String vile, String pays, String typeL,int prix, Date debut, Date fin, String proprietaire, Boolean status){
+    public void addSejour(String vile, String pays, String typeL,int prix, LocalDate debut, LocalDate fin, String proprietaire, Boolean status){
         Sejour sejour =new Sejour(sejours.size(), vile, pays, prix,typeL, debut, fin, proprietaire, status);
         sejours.add(sejour);
         enregistementSejour(sejour);

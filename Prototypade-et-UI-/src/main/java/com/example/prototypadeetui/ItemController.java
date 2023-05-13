@@ -37,13 +37,22 @@ public class ItemController  {
 
     private Sejour sejour;
 
+    public void setUtilisateur(String utilisateur) {
+        this.utilisateur = utilisateur;
+        System.out.println("item "+utilisateur );
+    }
+
+    private String utilisateur;
+
     public ItemController() {
+        utilisateur="";
 
     }
 
 
     public void setSejour(Sejour sejour){
         this.sejour=sejour;
+
 
         setlabel();
     }
@@ -58,11 +67,12 @@ public class ItemController  {
 
     @FXML
     void reserver(ActionEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("detailView.fxml"));
         Parent root=loader.load();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        //DetailController controller=loader.getController();
-        //controller.setSejour(sejour);
+        DetailController controller=loader.getController();
+        controller.setSejour(sejour,utilisateur);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

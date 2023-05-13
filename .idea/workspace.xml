@@ -4,23 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fde9b2a2-48f1-40a1-a7b4-b31a5fb284a0" name="Changes" comment="ajout de la redirection vers l'accueil">
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/commentaire.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/sejour.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDCommentaire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDSejour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Commentaire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/DetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Sejour.java" afterDir="false" />
+    <list default="true" id="fde9b2a2-48f1-40a1-a7b4-b31a5fb284a0" name="Changes" comment="sejour stable">
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/ItemComment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/utilisateur.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/utilisateur.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/commentaire.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/commentaire.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDCommentaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDCommentaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDSejour.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDSejour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Commentaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Commentaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/DetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/ItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/MainpageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/MainpageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Utilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/Mainpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/Mainpage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/item.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/item.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Sejour.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Sejour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/detailView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/detailView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +136,8 @@
       <workItem from="1683579608053" duration="661000" />
       <workItem from="1683705294416" duration="611000" />
       <workItem from="1683708048776" duration="1052000" />
-      <workItem from="1683797553666" duration="6098000" />
+      <workItem from="1683797553666" duration="8792000" />
+      <workItem from="1683977975041" duration="15788000" />
     </task>
     <task id="LOCAL-00001" summary="implementation de connection">
       <created>1679908237319</created>
@@ -170,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681812337921</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sejour stable">
+      <created>1683912510746</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683912510746</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,21 +185,31 @@
     <MESSAGE value="implementation de la" />
     <MESSAGE value="implementation de la bdd +inscription et login" />
     <MESSAGE value="ajout de la redirection vers l'accueil" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout de la redirection vers l'accueil" />
+    <MESSAGE value="sejour stable" />
+    <option name="LAST_COMMIT_MESSAGE" value="sejour stable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java</url>
-          <line>44</line>
+          <line>61</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java</url>
-          <line>46</line>
+          <line>63</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/DetailController.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="6" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
