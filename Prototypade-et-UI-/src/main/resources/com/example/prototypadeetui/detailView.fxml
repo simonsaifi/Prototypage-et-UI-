@@ -5,7 +5,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototypadeetui.DetailController">
@@ -14,7 +17,10 @@
       <Button layoutX="1096.0" layoutY="733.0" mnemonicParsing="false" onAction="#addcom" text="ajouter commentaire" AnchorPane.leftAnchor="1150.0" AnchorPane.topAnchor="750.0" />
       <TextField fx:id="newcom" layoutX="105.0" layoutY="733.0" prefWidth="800.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="750.0" />
       <Label layoutX="950.0" layoutY="723.0" text="note" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="725.0" />
-      <ScrollPane fx:id="com" layoutX="100.0" layoutY="337.0" prefHeight="300.0" prefWidth="1400.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="400.0" />
+      <ScrollPane fx:id="com" layoutX="100.0" layoutY="337.0" prefHeight="300.0" prefWidth="1400.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="400.0">
+         <content>
+            <VBox fx:id="vbox" prefWidth="1300.0" />
+         </content></ScrollPane>
       <Label layoutX="100.0" layoutY="725.0" text="Commentaire" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="725.0" />
       <Label layoutX="100.0" layoutY="319.0" text="Commentaires " AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="375.0" />
       <Label layoutX="100.0" layoutY="73.0" text="Detail sejour" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="100.0">
@@ -37,5 +43,10 @@
       <Label fx:id="prix" layoutX="698.0" layoutY="211.0" text="Label" />
       <Label fx:id="dated" layoutX="874.0" layoutY="211.0" text="Label" />
       <Label fx:id="datef" layoutX="1015.0" layoutY="211.0" text="Label" />
+      <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="26.0" layoutY="14.0" onMouseClicked="#backHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@téléchargement.png" />
+         </image></ImageView>
+      <Label fx:id="user" layoutX="1263.0" layoutY="22.0" text="Label" />
    </children>
 </AnchorPane>
