@@ -7,14 +7,17 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class BDDSejour {
     private String fEnregistrement="C:\\Users\\pedro\\IdeaProjects\\Prototypage-et-UI-\\Prototypade-et-UI-\\src\\bdd\\sejour.txt";
     private ArrayList<Sejour> sejours;
+    private BDDUtilisateur bddUtilisateur;
 
     public BDDSejour( ) {
         this.sejours= new ArrayList<Sejour>();
         InitialiseSejour();
+        bddUtilisateur=new BDDUtilisateur();
 
     }
     public void InitialiseSejour(){
@@ -45,7 +48,11 @@ public class BDDSejour {
     }
 
     public ArrayList<Sejour> getSejours(){
-        return sejours;
+        return (ArrayList<Sejour>) sejours.stream().filter(sejour -> sejour.getStatus()==false).collect(Collectors.toList());
+    }
+    public int getidPro(int id){
+        ArrayList<Sejour> Lsejour= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getId()==id).collect(Collectors.toList());
+        return bddUtilisateur.getutilisateur(Lsejour.get(0).getId()).getId();
     }
     public void enregistementSejour(Sejour sejour){
         try {
@@ -65,6 +72,15 @@ public class BDDSejour {
         Sejour sejour =new Sejour(sejours.size(), vile, pays, prix,typeL, debut, fin, proprietaire, status);
         sejours.add(sejour);
         enregistementSejour(sejour);
+    }
+
+    public Sejour getSejour(int id){
+        for (int i=0;i<sejours.size();i++){
+            if (id==sejours.get(i).getId()){
+                return sejours.get(i);
+            }
+        }
+        return null;
     }
 
 }

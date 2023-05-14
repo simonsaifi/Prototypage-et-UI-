@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -45,7 +46,8 @@ public class MainpageController implements Initializable {
     private ChoiceBox<String> filtre;
     @FXML
     private Label Lconnection;
-
+    @FXML
+    private ImageView buttonpanier;
 
     private String  utilisateur;
     private Parent root;
@@ -54,6 +56,7 @@ public class MainpageController implements Initializable {
     private  ArrayList<Sejour> sejoursToShow;
 
     private ArrayList<ItemController> controllers;
+
 
     private String [] choicefiltre={"ville","pays","prix superieur","prix inferieur","type de logement"};
     private int nbNodes;
@@ -71,6 +74,7 @@ public class MainpageController implements Initializable {
     public void setUtilisateur(String utilisateur) {
         this.utilisateur = utilisateur;
         Lconnection.setText(utilisateur);
+        buttonpanier.setVisible(true);
         for (int i=0;i<controllers.size();i++){
             controllers.get(i).setUtilisateur(utilisateur);
         }
@@ -84,6 +88,7 @@ public class MainpageController implements Initializable {
         sejours = bddSejour.getSejours();
         aficherliste(sejours);
         filtre.getItems().addAll(choicefiltre);
+        buttonpanier.setVisible(false);
         /*SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date datedebut;
         Date datefin;
@@ -115,10 +120,27 @@ public class MainpageController implements Initializable {
         nbNodes=as.size();
     }
     @FXML
+    void showpanier(MouseEvent event) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("panier.fxml"));
+        try {
+            Parent r=loader.load();
+            PanierController controller=loader.getController();
+            controller.setUtilisateur(utilisateur);
+            Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Scene sc = new Scene(r);
+            st.setScene(sc);
+            st.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+    @FXML
     void connection(MouseEvent event) throws IOException {
             if (utilisateur!=null){
                 utilisateur=null;
                 Lconnection.setText("connection");
+                buttonpanier.setVisible(false);
             }
             else{
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
@@ -138,19 +160,19 @@ public class MainpageController implements Initializable {
        String typeFilter=filtre.getValue();
        switch (typeFilter){
            case "ville":
-               sejoursToShow= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getVile().matches("^"+input+".*")).collect(Collectors.toList());
+               sejoursToShow= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getVile().matches("^"+input+".*")).filter(sejour -> sejour.getStatus()==false).collect(Collectors.toList());
                break;
            case "pays":
-               sejoursToShow= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getPays().matches("^"+input+".*")).collect(Collectors.toList());
+               sejoursToShow= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getPays().matches("^"+input+".*")).filter(sejour -> sejour.getStatus()==false).collect(Collectors.toList());
                break;
            case "type de logement":
-               sejoursToShow= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getTypeL().matches("^"+input+".*")).collect(Collectors.toList());
+               sejoursToShow= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getTypeL().matches("^"+input+".*")).filter(sejour -> sejour.getStatus()==false).collect(Collectors.toList());
                break;
            case "prix superieur":
-               sejoursToShow= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getPrix()>Integer.parseInt(input)).collect(Collectors.toList());
+               sejoursToShow= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getPrix()>Integer.parseInt(input)).filter(sejour -> sejour.getStatus()==false).collect(Collectors.toList());
                break;
            case "prix inferieur":
-               sejoursToShow= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getPrix()<Integer.parseInt(input)).collect(Collectors.toList());
+               sejoursToShow= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getPrix()<Integer.parseInt(input)).filter(sejour -> sejour.getStatus()==false).collect(Collectors.toList());
                break;
        }
        //sejoursToShow= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getVile().matches("^"+input+".*")).collect(Collectors.toList());

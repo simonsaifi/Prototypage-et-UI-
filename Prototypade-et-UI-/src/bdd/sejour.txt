@@ -2,4 +2,4 @@
 1,vcc,portugal,156,apart,2023-05-20,2023-05-29,pedro,false
 2,paris,france,15,apart,2023-06-01,2023-06-15,bmx,false
 3,beyrout,liban,15,vila,2023-06-21,2023-07-10,dota,false
-4,porto,portugal,150,villa,2023-08-25,2023-08-31,cylia,false
+4,porto,portugal,150,villa,2023-08-25,2023-08-31,cylia,true

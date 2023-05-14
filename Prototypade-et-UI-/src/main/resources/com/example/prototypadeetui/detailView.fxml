@@ -35,7 +35,7 @@
       <Label layoutX="399.0" layoutY="175.0" text="proprietaire" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="175.0" />
       <Label layoutX="680.0" layoutY="175.0" text="date de debut" AnchorPane.leftAnchor="850.0" AnchorPane.topAnchor="175.0" />
       <Label layoutX="742.0" layoutY="175.0" text="date de fin" AnchorPane.leftAnchor="1000.0" />
-      <Button layoutX="1355.0" layoutY="363.0" mnemonicParsing="false" onAction="#addpanier" text="add panier" />
+      <Button fx:id="buttonPanier" layoutX="1355.0" layoutY="363.0" mnemonicParsing="false" onAction="#addpanier" text="add panier" />
       <Label fx:id="ville" layoutX="96.0" layoutY="211.0" text="Label" />
       <Label fx:id="pays" layoutX="248.0" layoutY="211.0" text="Label" />
       <Label fx:id="type" layoutX="398.0" layoutY="211.0" text="Label" />

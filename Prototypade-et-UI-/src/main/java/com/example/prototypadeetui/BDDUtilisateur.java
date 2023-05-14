@@ -25,8 +25,11 @@ public class BDDUtilisateur {
             while(scanner.hasNextLine())
             {
                 String data[]=scanner.nextLine().split(",");
-                Utilisateur utilisateur=new Utilisateur(Integer.parseInt(data[0]),data[1],data[2],data[3],data[4]);
-                utilisateurs.add(utilisateur);
+                if (!data[0].equals("")){
+                    Utilisateur utilisateur=new Utilisateur(Integer.parseInt(data[0]),data[1],data[2],data[3],data[4]);
+                    utilisateurs.add(utilisateur);
+                }
+
             }
             scanner.close();
 

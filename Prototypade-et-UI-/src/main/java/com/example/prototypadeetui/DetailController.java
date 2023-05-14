@@ -54,7 +54,8 @@ public class DetailController  {
     private Label user;
     @FXML
     private Button butonCom;
-
+    @FXML
+    private Button buttonPanier;
     @FXML
     private Label ville;
     private Utilisateur utilisateur;
@@ -62,6 +63,7 @@ public class DetailController  {
     private ArrayList<Commentaire> commentaires;
     private BDDCommentaire bddCommentaire;
     private BDDUtilisateur bddUtilisateur;
+    private BDDpanier bddPanier;
     private Parent root;
 
     private Scene scene;
@@ -72,6 +74,7 @@ public class DetailController  {
        commentaires=new ArrayList<Commentaire>();
        bddCommentaire=new BDDCommentaire();
        bddUtilisateur=new BDDUtilisateur();
+       bddPanier=new BDDpanier();
 
 
     }
@@ -114,7 +117,7 @@ public class DetailController  {
 
     @FXML
     void addpanier(ActionEvent event) {
-
+        bddPanier.addPanier(utilisateur.getId(), sejour.getId());
     }
     void setDetail() throws IOException {
         pays.setText(sejour.getPays());
@@ -146,9 +149,11 @@ public class DetailController  {
         if (utilisateur!=null){
             user.setText(utilisateur.getLogin());
             butonCom.setDisable(false);
+            buttonPanier.setDisable(false);
         }
         else{
             butonCom.setDisable(true);
+            buttonPanier.setDisable(true);
         }
 
 
@@ -160,6 +165,8 @@ public class DetailController  {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Mainpage.fxml"));
         try {
             root=loader.load();
+            MainpageController controller=loader.getController();
+            controller.setUtilisateur(utilisateur.getLogin());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
