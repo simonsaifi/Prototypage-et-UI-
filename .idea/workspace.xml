@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fde9b2a2-48f1-40a1-a7b4-b31a5fb284a0" name="Changes" comment="ajout de la reservation">
-      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/ReservationSejour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/panier.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/panier.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/reservation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/reservation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/sejour.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/sejour.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/utilisateur.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/bdd/utilisateur.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDReservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDReservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDSejour.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDSejour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/BDDUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/InscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/InscriptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/ItemReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/ItemReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/MainpageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/MainpageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/java/com/example/prototypadeetui/Utilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/Mainpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/Mainpage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/itemReservation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/itemReservation.fxml" afterDir="false" />
+    <list default="true" id="fde9b2a2-48f1-40a1-a7b4-b31a5fb284a0" name="Changes" comment="ajout de la confirmation">
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/panier.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/panier.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/reservation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prototypade-et-UI-/src/main/resources/com/example/prototypadeetui/reserved.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +143,7 @@
       <workItem from="1683708048776" duration="1052000" />
       <workItem from="1683797553666" duration="8792000" />
       <workItem from="1683977975041" duration="25540000" />
-      <workItem from="1684046584946" duration="32448000" />
+      <workItem from="1684046584946" duration="32544000" />
     </task>
     <task id="LOCAL-00001" summary="implementation de connection">
       <created>1679908237319</created>
@@ -220,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684078216152</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ajout de la confirmation">
+      <created>1684092395130</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684092395130</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +230,8 @@
     <MESSAGE value="add commentaire plus fix date" />
     <MESSAGE value="affichage commentaire fix" />
     <MESSAGE value="ajout de la reservation" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout de la reservation" />
+    <MESSAGE value="ajout de la confirmation" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout de la confirmation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
