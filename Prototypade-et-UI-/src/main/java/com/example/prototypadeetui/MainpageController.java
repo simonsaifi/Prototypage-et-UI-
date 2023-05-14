@@ -48,6 +48,8 @@ public class MainpageController implements Initializable {
     private Label Lconnection;
     @FXML
     private ImageView buttonpanier;
+    @FXML
+    private ImageView reservation;
 
     private String  utilisateur;
     private Parent root;
@@ -75,6 +77,7 @@ public class MainpageController implements Initializable {
         this.utilisateur = utilisateur;
         Lconnection.setText(utilisateur);
         buttonpanier.setVisible(true);
+        reservation.setVisible(true);
         for (int i=0;i<controllers.size();i++){
             controllers.get(i).setUtilisateur(utilisateur);
         }
@@ -89,6 +92,7 @@ public class MainpageController implements Initializable {
         aficherliste(sejours);
         filtre.getItems().addAll(choicefiltre);
         buttonpanier.setVisible(false);
+        reservation.setVisible(false);
         /*SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date datedebut;
         Date datefin;
@@ -136,11 +140,28 @@ public class MainpageController implements Initializable {
 
     }
     @FXML
+    void showReservation(MouseEvent event) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("reservation.fxml"));
+        try {
+            Parent r=loader.load();
+            ReservationController controller=loader.getController();
+            controller.setUtilisateur(utilisateur);
+            Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Scene sc = new Scene(r);
+            st.setScene(sc);
+            st.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
     void connection(MouseEvent event) throws IOException {
             if (utilisateur!=null){
                 utilisateur=null;
                 Lconnection.setText("connection");
                 buttonpanier.setVisible(false);
+                reservation.setVisible(false);
             }
             else{
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));

@@ -29,9 +29,14 @@
       </ScrollPane>
       <ChoiceBox fx:id="filtre" layoutX="1138.0" layoutY="75.0" prefWidth="150.0" AnchorPane.leftAnchor="1138.0" AnchorPane.topAnchor="75.0" />
       <Label fx:id="Lconnection" layoutX="1357.0" layoutY="20.0" onMouseClicked="#connection" text="connection" />
-      <ImageView fx:id="buttonpanier" fitHeight="34.0" fitWidth="40.0" layoutX="1276.0" layoutY="18.0" onMouseClicked="#showpanier" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="buttonpanier" fitHeight="26.0" fitWidth="46.0" layoutX="1276.0" layoutY="18.0" onMouseClicked="#showpanier" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@panier.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="reservation" fitHeight="33.0" fitWidth="32.0" layoutX="1226.0" layoutY="15.0" onMouseClicked="#showReservation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@reserved.png" />
          </image>
       </ImageView>
 

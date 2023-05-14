@@ -40,7 +40,7 @@ public class InscriptionController {
     void incription(ActionEvent event) {
          BDDUtilisateur bdd=new BDDUtilisateur();
          if (!login.getText().isEmpty()&&!nom.getText().isEmpty()&&!prenon.getText().isEmpty()&&!pass.getText().isEmpty()){
-            bdd.addUtilisateur(nom.getText(),prenon.getText(),login.getText(),pass.getText());
+            bdd.addUtilisateur(nom.getText(),prenon.getText(),login.getText(),pass.getText(),false);
              System.out.println("vous etes inscrit");
          }
          else{

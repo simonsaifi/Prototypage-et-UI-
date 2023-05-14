@@ -1,8 +1,11 @@
 package com.example.prototypadeetui;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -57,17 +60,17 @@ public class BDDReservation {
     public ArrayList<Reservation> getReservationsUtilisateur(int idUtilisateurs){
         return (ArrayList<Reservation>) reservations.stream().filter(reservation -> reservation.getIdutilisateur()==idUtilisateurs).collect(Collectors.toList());
     }
-    public ArrayList<Reservation> getReservationsProprietaire(int idproprietaire){
-        return (ArrayList<Reservation>) reservations.stream().filter(reservation -> bddSejour.getidPro(reservation.getIdSejour())==idproprietaire).collect(Collectors.toList());
+    public ArrayList<Reservation> getReservationsbySejour(int sejour){
+        return (ArrayList<Reservation>) reservations.stream().filter(reservation ->reservation.getIdSejour()==sejour).collect(Collectors.toList());
     }
-    public void setvalid(int id ,Boolean valid){
+    public void setvalid(int id ,boolean valid){
         ArrayList<Reservation> Lreservation= (ArrayList<Reservation>) reservations.stream().filter(reservation -> reservation.getId()==id).collect(Collectors.toList());
         Lreservation.get(0).setValider(valid);
     }
-    public void setannuler(int id ,Boolean annuler){
+    public void setannuler(int id ,boolean annuler){
         ArrayList<Reservation> Lreservation= (ArrayList<Reservation>) reservations.stream().filter(reservation -> reservation.getId()==id).collect(Collectors.toList());
         Lreservation.get(0).setAnuler(annuler);
-    }public void setencours(int id ,Boolean encour){
+    }public void setencours(int id ,boolean encour){
         ArrayList<Reservation> Lreservation= (ArrayList<Reservation>) reservations.stream().filter(reservation -> reservation.getId()==id).collect(Collectors.toList());
         Lreservation.get(0).setEncour(encour);
     }
@@ -77,6 +80,32 @@ public class BDDReservation {
         reservations.add(reservation);
         enregistementReservation(reservation);
 
+    }
+    public void modifier(int id,boolean valid,boolean annuler,boolean encours){
+        setannuler(id,annuler);
+        setencours(id,encours);
+        setvalid(id,valid);
+        ArrayList<Reservation> Lreservation= (ArrayList<Reservation>) reservations.stream().filter(reservation -> reservation.getId()==id).collect(Collectors.toList());
+        try {
+            // Lire le contenu du fichier dans une liste de chaînes de caractères
+            List<String> lines = Files.readAllLines(Path.of(fEnregistrement));
+
+            // Vérifier si la ligne à modifier existe
+            if (id >= 1 && id <= lines.size()) {
+                // Modifier la ligne spécifiée avec le nouveau contenu
+                lines.set(id - 1, Lreservation.get(0).toString());
+
+            } else {
+                System.out.println("Ligne spécifiée à modifier introuvable.");
+                return;
+            }
+
+            // Écrire le contenu modifié dans le fichier
+            Files.write(Path.of(fEnregistrement), lines);
+            System.out.println("Fichier modifié avec succès.");
+        } catch (IOException e) {
+            System.out.println("Erreur lors de la modification du fichier : " + e.getMessage());
+        }
     }
 
 }

@@ -6,14 +6,16 @@ public class Utilisateur {
     private String prenom;
     private String login;
     private String pass;
+    private  Boolean pro;
 
 
-    public Utilisateur(int id,String nom, String prenom, String login, String pass) {
+    public Utilisateur(int id,String nom, String prenom, String login, String pass,Boolean pro) {
         this.id=id;
         this.nom = nom;
         this.prenom = prenom;
         this.login = login;
         this.pass = pass;
+        this.pro=pro;
     }
     public int getId(){return id;}
     public String getNom() {
@@ -48,8 +50,16 @@ public class Utilisateur {
         this.pass = pass;
     }
 
+    public Boolean getPro() {
+        return pro;
+    }
+
+    public void setPro(Boolean pro) {
+        this.pro = pro;
+    }
+
     @Override
     public String toString() {
-        return id+","+nom+","+prenom+","+login+","+pass;
+        return id+","+nom+","+prenom+","+login+","+pass+","+pro;
     }
 }

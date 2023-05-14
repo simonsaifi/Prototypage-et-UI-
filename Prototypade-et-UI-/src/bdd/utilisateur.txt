@@ -1,6 +1,6 @@
-0,didah,wadih,wdidah,ramadan
-1,simon,simon,dota,dota
-2,pedro,pedro,bmx,admin
-3,morais,pedro,zuur,cr7
-4,m,m,m,m
-5,tsi,cylia,cylia,test
+0,didah,wadih,wdidah,ramadan,true
+1,simon,simon,dota,dota,true
+2,pedro,pedro,bmx,admin,false
+3,morais,pedro,zuur,cr7,false
+4,m,m,m,m,false
+5,tsi,cylia,cylia,test,false

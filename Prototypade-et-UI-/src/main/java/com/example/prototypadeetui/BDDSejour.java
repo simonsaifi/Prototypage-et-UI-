@@ -1,11 +1,14 @@
 package com.example.prototypadeetui;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -50,9 +53,9 @@ public class BDDSejour {
     public ArrayList<Sejour> getSejours(){
         return (ArrayList<Sejour>) sejours.stream().filter(sejour -> sejour.getStatus()==false).collect(Collectors.toList());
     }
-    public int getidPro(int id){
-        ArrayList<Sejour> Lsejour= (ArrayList<Sejour>) sejours.stream().filter(sejour->sejour.getId()==id).collect(Collectors.toList());
-        return bddUtilisateur.getutilisateur(Lsejour.get(0).getId()).getId();
+    public ArrayList<Sejour> getsejourPro(int idpro){
+        return  (ArrayList<Sejour>) sejours.stream().filter(sejour->bddUtilisateur.getutilisateur(sejour.getProprietaire()).getId()==idpro).collect(Collectors.toList());
+
     }
     public void enregistementSejour(Sejour sejour){
         try {
@@ -81,6 +84,31 @@ public class BDDSejour {
             }
         }
         return null;
+    }
+    public void modifier(int id,Boolean status){
+
+        ArrayList<Sejour> Lsejour= (ArrayList<Sejour>) sejours.stream().filter(sejour -> sejour.getId()==id).collect(Collectors.toList());
+        Lsejour.get(0).setStatus(status);
+        try {
+            // Lire le contenu du fichier dans une liste de chaînes de caractères
+            List<String> lines = Files.readAllLines(Path.of(fEnregistrement));
+
+            // Vérifier si la ligne à modifier existe
+            if (id >= 1 && id <= lines.size()) {
+                // Modifier la ligne spécifiée avec le nouveau contenu
+                lines.set(id - 1,Lsejour.get(0).toString());
+
+            } else {
+                System.out.println("Ligne spécifiée à modifier introuvable.");
+                return;
+            }
+
+            // Écrire le contenu modifié dans le fichier
+            Files.write(Path.of(fEnregistrement), lines);
+            System.out.println("Fichier modifié avec succès.");
+        } catch (IOException e) {
+            System.out.println("Erreur lors de la modification du fichier : " + e.getMessage());
+        }
     }
 
 }

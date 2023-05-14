@@ -26,7 +26,7 @@ public class BDDUtilisateur {
             {
                 String data[]=scanner.nextLine().split(",");
                 if (!data[0].equals("")){
-                    Utilisateur utilisateur=new Utilisateur(Integer.parseInt(data[0]),data[1],data[2],data[3],data[4]);
+                    Utilisateur utilisateur=new Utilisateur(Integer.parseInt(data[0]),data[1],data[2],data[3],data[4],Boolean.parseBoolean(data[5]));
                     utilisateurs.add(utilisateur);
                 }
 
@@ -73,8 +73,8 @@ public class BDDUtilisateur {
         }
     }
 
-    public void addUtilisateur(String nom ,String prenom,String login ,String pass){
-        Utilisateur utilisateur =new Utilisateur(utilisateurs.size(),nom,prenom,login,pass);
+    public void addUtilisateur(String nom ,String prenom,String login ,String pass,Boolean pro){
+        Utilisateur utilisateur =new Utilisateur(utilisateurs.size(),nom,prenom,login,pass,pro);
         utilisateurs.add(utilisateur);
         enregistementUtilisateur(utilisateur);
     }
